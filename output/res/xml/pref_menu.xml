@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:icon="@drawable/ic_pref_sync" android:title="@string/title_synchronization" android:key="sync" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_offline" android:title="@string/preference_category_offline_reading" android:key="offline" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_notification" android:title="@string/preference_category_notification" android:key="notification" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_cache" android:title="@string/preference_category_cache" android:key="cache" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_look_and_feel" android:title="@string/preference_category_ui" android:key="look_feel" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_reading" android:title="@string/preference_category_reading" android:key="reading" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_services" android:title="@string/preference_category_services" android:key="services" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_backup_restore" android:title="@string/preference_category_backup_restore" android:key="backup" />
+    <PreferenceScreen android:icon="@drawable/ic_pref_other" android:title="@string/preference_category_other" android:key="other" />
+</PreferenceScreen>

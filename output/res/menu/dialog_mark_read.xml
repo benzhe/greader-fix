@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/mark_read_all" android:title="@string/label_all" />
+    <item android:id="@id/mark_read_1_day" android:title="@string/array_mark_read_older_1_day" />
+    <item android:id="@id/mark_read_2_days" android:title="@string/array_mark_read_older_2_days" />
+    <item android:id="@id/mark_read_3_days" android:title="@string/array_mark_read_older_3_days" />
+    <item android:id="@id/mark_read_1_week" android:title="@string/array_mark_read_older_1_week" />
+    <item android:id="@id/mark_read_2_weeks" android:title="@string/array_mark_read_older_2_weeks" />
+    <item android:id="@id/mark_read_options" android:title="@string/view_options" />
+</menu>

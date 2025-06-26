@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_category_other">
+        <PreferenceScreen android:title="@string/menu_feedback" android:key="preference_feedback" />
+        <PreferenceScreen android:title="@string/menu_privacy_policy" android:key="preference_privacy_policy" />
+        <PreferenceScreen android:title="@string/menu_privacy_settings" android:key="preference_privacy_settings" />
+    </PreferenceCategory>
+</PreferenceScreen>

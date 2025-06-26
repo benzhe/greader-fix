@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar_actionbar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:padding="@dimen/space_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subscribe_select_opml_file" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:id="@id/input" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="" android:singleLine="false" android:editable="false" android:layout_weight="1.0" android:inputType="text" />
+            <ImageView android:id="@id/file_picker_button" android:background="?buttonBackground" android:padding="5.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/file_picker_folder" android:contentDescription="@string/txt_open" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_below="@id/content" style="?buttonBar">
+        <Button android:id="@id/cancel_button" android:text="@android:string/cancel" android:layout_marginEnd="@dimen/space_small" style="?buttonBarButton" />
+        <Button android:id="@id/ok_button" android:text="@android:string/ok" android:layout_marginStart="@dimen/space_small" style="?buttonBarButton" />
+    </LinearLayout>
+    <include layout="@layout/toolbar_actionbar_shadow" />
+</RelativeLayout>

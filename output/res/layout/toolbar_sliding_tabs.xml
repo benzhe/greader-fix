@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noinnion.android.reader.widget.SlidingTabLayout android:id="@id/sliding_tabs" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_category_reading">
+        <PreferenceScreen android:title="@string/preference_category_mark_as_read" android:key="preference_mark_read" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_article_view">
+        <PreferenceScreen android:title="@string/preference_article_controls" android:key="preference_article_controls" />
+        <ListPreference android:entries="@array/connection_options_labels" android:title="@string/preference_item_load_images_title" android:key="item_images_loading" android:summary="@string/preference_item_load_images_summary" android:defaultValue="1" android:dialogTitle="@string/preference_item_load_images_title" android:entryValues="@array/connection_options_values" />
+        <ListPreference android:entries="@array/item_load_link_labels" android:title="@string/preference_item_load_link_title" android:key="item_load_link" android:summary="@string/preference_item_load_link_summary" android:defaultValue="0" android:dialogTitle="@string/preference_item_load_link_title" android:entryValues="@array/item_load_link_values" />
+        <CheckBoxPreference android:title="@string/preference_item_autoload_link_title" android:key="item_autoload_link" android:summary="@string/preference_item_autoload_link_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preference_item_autoload_reading_mode_title" android:key="item_autoload_reading_mode" android:summary="@string/preference_item_autoload_reading_mode_summary" android:defaultValue="false" />
+        <ListPreference android:entries="@array/user_agent_labels" android:title="@string/preference_item_user_agent_title" android:key="item_user_agent" android:summary="@string/preference_item_user_agent_summary" android:defaultValue="0" android:dialogTitle="@string/preference_item_user_agent_title" android:entryValues="@array/user_agent_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/client_feedly" android:background="@drawable/bg_account_row" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip">
+        <ImageView android:id="@id/icon_feedly" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_client_feedly" android:layout_centerVertical="true" android:contentDescription="@string/client_feedly" />
+        <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/client_feedly" android:layout_toRightOf="@id/icon_feedly" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_bar_right" android:layout_alignParentRight="true" android:contentDescription="@string/client_feedly" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/client_old_reader" android:background="@drawable/bg_account_row" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip">
+        <ImageView android:id="@id/icon_old_reader" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_client_old_reader" android:layout_centerVertical="true" android:contentDescription="@string/client_old_reader" />
+        <TextView android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/client_old_reader" android:layout_toRightOf="@id/icon_old_reader" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_bar_right" android:layout_alignParentRight="true" android:contentDescription="@string/client_feedly" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/client_inoreader" android:background="@drawable/bg_account_row" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip">
+        <ImageView android:id="@id/icon_inoreader" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_client_inoreader" android:layout_centerVertical="true" android:contentDescription="@string/client_inoreader" />
+        <TextView android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/client_inoreader" android:layout_toRightOf="@id/icon_inoreader" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_bar_right" android:layout_alignParentRight="true" android:contentDescription="@string/client_feedly" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/client_rss_reader" android:background="@drawable/bg_account_row" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip">
+        <ImageView android:id="@id/icon_rss" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_client_rss_reader" android:layout_centerVertical="true" android:contentDescription="@string/client_rss_reader" />
+        <TextView android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/client_rss_reader" android:layout_toRightOf="@id/icon_rss" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_bar_right" android:layout_alignParentRight="true" android:contentDescription="@string/client_feedly" />
+    </RelativeLayout>
+</merge>

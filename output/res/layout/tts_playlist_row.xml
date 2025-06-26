@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:ignoreGravity="@id/grabber" style="?listRow"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.noinnion.android.view.TintableImageView android:id="@id/icon" android:src="@drawable/ic_media_previous" android:layout_alignParentLeft="true" android:layout_centerVertical="true" app:tiv_tint="?colorIconNormal" style="@style/RowIcon" />
+    <com.noinnion.android.view.TintableImageView android:id="@id/delete" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_close" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:tiv_tint="?colorIconNormal" style="?actionButtonStyle" />
+    <TextView android:ellipsize="end" android:id="@id/title" android:maxLines="3" android:singleLine="false" android:layout_toLeftOf="@id/delete" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" style="?listRowTitle" />
+</RelativeLayout>

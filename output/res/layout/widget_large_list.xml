@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView android:scrollbarStyle="outsideOverlay" android:scrollbars="none" android:fadingEdge="none" android:duplicateParentState="true" android:persistentDrawingCache="scrolling" android:alwaysDrawnWithCache="true" android:addStatesFromChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollingCache="true" android:cacheColorHint="#00000000" android:divider="@color/gray_light" android:choiceMode="singleChoice"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

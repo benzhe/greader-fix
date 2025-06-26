@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="0.0dip" style="?listRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="52.0dip" android:layout_height="52.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/ic_bundle" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:ellipsize="marquee" android:id="@id/name" style="?listRowTitle" />
+        <TextView android:id="@id/url" style="?listRowSubTitle" />
+        <TextView android:id="@id/desc" android:visibility="gone" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" style="?listRowSubTitle" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/add_button" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/btn_subscribe" />
+</LinearLayout>

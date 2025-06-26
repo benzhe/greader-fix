@@ -1,0 +1,55 @@
+package defpackage;
+
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+
+/* loaded from: classes.dex */
+public class qd3 implements IInterface {
+    public final IBinder e;
+    public final String f;
+
+    public qd3(IBinder iBinder, String str) {
+        this.e = iBinder;
+        this.f = str;
+    }
+
+    public final Parcel Z(int i, Parcel parcel) throws RemoteException {
+        Parcel parcelObtain = Parcel.obtain();
+        try {
+            try {
+                this.e.transact(i, parcel, parcelObtain, 0);
+                parcelObtain.readException();
+                return parcelObtain;
+            } catch (RuntimeException e) {
+                parcelObtain.recycle();
+                throw e;
+            }
+        } finally {
+            parcel.recycle();
+        }
+    }
+
+    @Override // android.os.IInterface
+    public IBinder asBinder() {
+        return this.e;
+    }
+
+    public final void g0(int i, Parcel parcel) throws RemoteException {
+        Parcel parcelObtain = Parcel.obtain();
+        try {
+            this.e.transact(i, parcel, parcelObtain, 0);
+            parcelObtain.readException();
+        } finally {
+            parcel.recycle();
+            parcelObtain.recycle();
+        }
+    }
+
+    public final Parcel l0() {
+        Parcel parcelObtain = Parcel.obtain();
+        parcelObtain.writeInterfaceToken(this.f);
+        return parcelObtain;
+    }
+}

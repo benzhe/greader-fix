@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/subscription_bar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ExpandableListView android:id="@id/expandable_list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?expandableListView" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <include layout="@layout/subscription_manage_list" />
+    </FrameLayout>
+</LinearLayout>

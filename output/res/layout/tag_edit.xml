@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/space_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/tag_preferences" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:hint="@string/txt_title" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <CheckBox android:id="@id/sync_excluded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sync_sync_excluded" />
+            <CheckBox android:id="@id/hide" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/view_hide_tag" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/sub_preferences" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/notification_container" android:background="?buttonBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/notification" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_notification" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/offline_format_container" android:paddingLeft="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="@dimen/space_xlarge" android:layout_marginTop="@dimen/space_normal" style="?actionDropDownStyle">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_offline_prompt" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/display_loading_container" android:paddingLeft="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="@dimen/space_xlarge" android:layout_marginTop="@dimen/space_small" style="?actionDropDownStyle">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_display_prompt" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/load_link_container" android:paddingLeft="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="@dimen/space_xlarge" android:layout_marginTop="@dimen/space_small" style="?actionDropDownStyle">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_load_link_prompt" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/reading_mode_container" android:paddingLeft="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="@dimen/space_xlarge" android:layout_marginTop="@dimen/space_small" style="?actionDropDownStyle">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_reading_mode_prompt" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/user_agent_container" android:paddingLeft="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="@dimen/space_xlarge" android:layout_marginTop="@dimen/space_small" style="?actionDropDownStyle">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_user_agent_prompt" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/image_fit_container" android:background="?buttonBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <CheckBox android:id="@id/image_fit" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_image_fit" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/javascript_container" android:background="?buttonBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/javascript" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_javascript" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

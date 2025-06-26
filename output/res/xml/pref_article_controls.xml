@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_article_controls">
+        <CheckBoxPreference android:title="@string/preference_auto_hide_item_controls_title" android:key="auto_hide_item_controls" android:summary="@string/preference_auto_hide_item_controls_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_show_navigation_bar_title" android:key="show_navigation_bar" android:summary="@string/preference_show_navigation_bar_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_show_item_bar_title" android:key="show_item_bar" android:summary="@string/preference_show_item_bar_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_show_zoom_button_title" android:key="show_zoom_button" android:summary="@string/preference_show_zoom_button_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_reading">
+        <ListPreference android:entries="@array/volume_key_action_labels" android:title="@string/preference_item_volume_key_action_title" android:key="item_volume_key_action" android:summary="@string/preference_item_volume_key_action_summary" android:defaultValue="1" android:dialogTitle="@string/preference_item_volume_key_action_title" android:entryValues="@array/volume_key_action_values" />
+        <ListPreference android:entries="@array/navigation_gesture_labels" android:title="@string/preference_item_navigation_gesture_title" android:key="item_navigation_gesture" android:summary="@string/preference_item_navigation_gesture_summary" android:defaultValue="1" android:dialogTitle="@string/preference_item_navigation_gesture_title" android:entryValues="@array/navigation_gesture_values" />
+        <ListPreference android:entries="@array/item_double_tab_action_labels" android:title="@string/preference_item_double_tap_action_title" android:key="item_double_tap_action" android:summary="@string/preference_item_double_tap_action_summary" android:defaultValue="9" android:dialogTitle="@string/preference_item_double_tap_action_title" android:entryValues="@array/item_double_tab_action_values" />
+        <CheckBoxPreference android:title="@string/preference_item_inapp_browser_title" android:key="item_inapp_browser" android:summary="@string/preference_item_inapp_browser_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_item_inapp_youtube_title" android:key="item_inapp_youtube" android:summary="@string/preference_item_inapp_youtube_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

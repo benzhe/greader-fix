@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.noinnion.android.view.progress.DonutProgress android:layout_gravity="center" android:id="@id/v_progress_bar" android:layout_width="72.0dip" android:layout_height="72.0dip" app:donut_finished_color="?colorAccent" app:donut_text_color="?colorAccent" />
+    <pl.droidsonroids.gif.GifImageView android:layout_gravity="center" android:id="@id/v_gif_texture_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/default_check" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/space_normal" android:text="@string/txt_set_default" />
+    <GridView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:horizontalSpacing="@dimen/space_normal" android:verticalSpacing="@dimen/space_normal" android:numColumns="4" />
+    <LinearLayout android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

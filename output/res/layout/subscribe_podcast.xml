@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/search_bar" android:paddingTop="@dimen/space_small" android:paddingBottom="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/space_normal" android:paddingEnd="@dimen/space_normal">
+        <EditText android:layout_gravity="center_vertical" android:id="@id/query" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/txt_search" android:singleLine="true" android:layout_weight="1.0" android:inputType="textUri" android:imeOptions="actionSearch" />
+        <Button android:id="@id/search_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_search" android:layout_marginStart="@dimen/space_normal" />
+    </LinearLayout>
+    <ListView android:id="@id/v_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/search_bar" android:layout_alignParentBottom="true" style="?listView" />
+    <LinearLayout android:gravity="center" android:id="@id/v_empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/search_bar" android:layout_alignParentBottom="true">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subscribe_podcast_info" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_below="@id/search_bar" layout="@layout/toolbar_actionbar_shadow" />
+</RelativeLayout>

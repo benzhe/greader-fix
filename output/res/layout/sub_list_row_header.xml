@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noinnion.android.reader.ui.view.CheckableGroupLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" style="?listRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_centerVertical="true" style="@style/RowIcon" />
+    <TextView android:id="@id/unread" style="?listRowCount" />
+    <TextView android:id="@id/title" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/unread" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" style="?listRowTitle" />
+</com.noinnion.android.reader.ui.view.CheckableGroupLayout>

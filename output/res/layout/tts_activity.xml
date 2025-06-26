@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:theme="?actionbarTheme" android:id="@id/toolbar" android:background="?actionbarBackground" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <LinearLayout android:orientation="vertical" android:id="@id/language_selector" android:paddingRight="36.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?actionDropDownStyle">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tts_voice_reading" style="?actionbarTitle" />
+            <TextView android:textColor="?colorControlNormal" android:id="@id/language_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="..." style="?actionbarSubtitle" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout android:id="@id/playlist" android:background="?colorPrimaryDark" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?buttonBackground">
+        <com.noinnion.android.view.TintableImageView android:layout_gravity="center|left" android:id="@id/item_icon" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_media_playlist" android:scaleType="fitCenter" style="@style/RowIcon" />
+        <TextView android:textColor="@color/white" android:layout_gravity="center|left" android:id="@id/item_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip" android:singleLine="true" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/premium_upgrade" android:background="?selectableItemBackground" android:padding="@dimen/space_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/premium_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_star_circle_outline" android:layout_centerVertical="true" app:tint="?colorAccent" />
+            <TextView android:id="@id/premium_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/premium_limit_tts" android:layout_centerVertical="true" android:layout_marginStart="@dimen/space_normal" android:layout_toEndOf="@id/premium_icon" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <ListView android:id="@id/list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/empty" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?progressBarSmallInverse" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?buttonBar">
+        <com.noinnion.android.view.TintableImageView android:id="@id/prev_button" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_media_previous" android:scaleType="fitCenter" app:tiv_tint="?colorIconNormal" style="?actionButtonStyle" />
+        <com.noinnion.android.view.TintableImageView android:id="@id/rewind_button" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_media_rewind" android:scaleType="fitCenter" app:tiv_tint="?colorIconNormal" style="?actionButtonStyle" />
+        <com.noinnion.android.view.TintableImageView android:id="@id/play_button" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_media_pause" app:tiv_tint="?colorAccent" style="?actionButtonStyle" />
+        <com.noinnion.android.view.TintableImageView android:id="@id/forward_button" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_media_forward" android:scaleType="fitCenter" app:tiv_tint="?colorIconNormal" style="?actionButtonStyle" />
+        <com.noinnion.android.view.TintableImageView android:id="@id/next_button" android:padding="10.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_media_next" android:scaleType="fitCenter" app:tiv_tint="?colorIconNormal" style="?actionButtonStyle" />
+    </LinearLayout>
+    <LinearLayout style="?buttonBar">
+        <Button android:id="@id/stop_button" android:text="@string/txt_stop" android:layout_marginEnd="@dimen/space_small" style="?buttonBarButton" />
+        <Button android:id="@id/cancel_button" android:text="@string/txt_in_background" android:layout_marginStart="@dimen/space_small" style="?buttonBarButton" />
+    </LinearLayout>
+</LinearLayout>

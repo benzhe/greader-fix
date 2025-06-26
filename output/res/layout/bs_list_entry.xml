@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/BottomSheet.ListItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bs_list_image" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/BottomSheet.ListItemImage" />
+    <ImageView android:id="@id/bs_list_check" android:src="@drawable/bs_ic_check" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/BottomSheet.GridItemCheck" />
+    <TextView android:id="@id/bs_list_title" android:layout_toLeftOf="@id/bs_list_check" android:layout_toRightOf="@id/bs_list_image" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true" style="@style/BottomSheet.ListItemTitle" />
+</RelativeLayout>

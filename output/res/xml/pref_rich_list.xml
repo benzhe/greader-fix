@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/preference_rich_article_list"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/preference_rich_article_list_title" android:key="rich_article_list" android:summary="@string/preference_rich_article_list_summary" android:defaultValue="true" />
+    <CheckBoxPreference android:title="@string/preference_rich_show_snippet_title" android:key="rich_show_snippet" android:summary="@string/preference_rich_show_snippet_summary" android:dependency="rich_article_list" android:defaultValue="true" />
+    <ListPreference android:entries="@array/connection_options_labels" android:title="@string/preference_rich_show_thumbnail_title" android:key="rich_show_thumb" android:summary="@string/preference_rich_show_thumbnail_summary" android:dependency="rich_article_list" android:defaultValue="2" android:dialogTitle="@string/preference_rich_show_thumbnail_title" android:entryValues="@array/connection_options_values" />
+</PreferenceScreen>

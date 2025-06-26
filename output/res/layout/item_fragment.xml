@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/ad_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <com.noinnion.android.reader.ui.view.WebViewPager android:id="@id/web_view_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ad_banner" android:layout_alignWithParentIfMissing="true" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progress" style="@style/ProgressBarHorizontal" />
+    <LinearLayout android:layout_gravity="center|right|top" android:id="@id/item_controls" android:background="@drawable/bg_rounded_transparent" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip">
+        <ImageView android:id="@id/voice_reading" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/ic_bar_speaker" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/icon_media" android:visibility="gone" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/ic_bar_podcast" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/icon_star" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/ic_star_unchecked" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/keep_unread" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/ic_read_checked" style="@style/ItemBarIcon.Horizontal" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom|center|right" android:orientation="vertical" android:id="@id/zoom_controls" android:background="@drawable/bg_rounded_transparent" android:layout_width="36.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginBottom="60.0dip">
+        <ImageView android:id="@id/go_back" android:src="@drawable/ic_back" style="@style/ItemBarIcon.Vertical" />
+        <ImageView android:id="@id/fullscreen" android:src="@drawable/ic_contract" style="@style/ItemBarIcon.Vertical" />
+        <ImageView android:id="@id/zoom_in" android:src="@drawable/ic_zoom_in" style="@style/ItemBarIcon.Vertical" />
+        <ImageView android:id="@id/zoom_out" android:src="@drawable/ic_zoom_out" style="@style/ItemBarIcon.Vertical" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/action_controls" android:background="@color/black_transparent_66" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <ImageView android:id="@id/previous" android:src="@drawable/ic_bar_left" android:layout_centerVertical="true" style="@style/ItemBarIcon" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/browser" android:src="@drawable/ic_bar_browser" android:contentDescription="@string/menu_open_in_browser" style="@style/ItemBarIcon.Horizontal" />
+            <ImageView android:id="@id/share" android:src="@drawable/ic_bar_share" android:contentDescription="@string/txt_share" style="@style/ItemBarIcon.Horizontal" />
+            <ImageView android:id="@id/service" android:src="@drawable/ic_bar_service" android:contentDescription="@string/preference_category_services" style="@style/ItemBarIcon.Horizontal" />
+            <ImageView android:id="@id/readability" android:visibility="gone" android:src="@drawable/ic_readability_unchecked" android:contentDescription="@string/service_readability_title" style="@style/ItemBarIcon.Horizontal" />
+        </LinearLayout>
+        <ImageView android:id="@id/next" android:src="@drawable/ic_bar_right" android:layout_alignParentRight="true" android:contentDescription="@string/media_next_article" style="@style/ItemBarIcon" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/sync_all" android:title="@string/array_sync_all" />
+    <item android:id="@id/sync_all_offline" android:title="@string/array_sync_all_offline" />
+    <divider />
+    <item android:id="@id/sync_selection" android:title="@string/array_sync_all" />
+    <item android:id="@id/sync_selection_offline" android:title="@string/array_sync_all_offline" />
+</menu>

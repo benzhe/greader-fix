@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/ad_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <com.noinnion.android.reader.ui.view.WebViewPager android:id="@id/web_view_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ad_banner" android:layout_alignWithParentIfMissing="true" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progress" style="@style/ProgressBarHorizontal" />
+    <LinearLayout android:layout_gravity="center|right|top" android:id="@id/item_controls" android:background="@drawable/bg_rounded_transparent" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+        <ImageView android:id="@id/browser" android:src="@drawable/ic_bar_browser" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/share" android:src="@drawable/ic_bar_share" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/service" android:src="@drawable/ic_bar_service" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/readability" android:visibility="gone" android:src="@drawable/ic_readability_unchecked" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/voice_reading" android:layout_marginRight="10.0dip" android:src="@drawable/ic_bar_speaker" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/icon_media" android:visibility="gone" android:src="@drawable/ic_bar_podcast" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/icon_star" android:src="@drawable/ic_star_unchecked" style="@style/ItemBarIcon.Horizontal" />
+        <ImageView android:id="@id/keep_unread" android:src="@drawable/ic_read_checked" style="@style/ItemBarIcon.Horizontal" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom|center|right" android:orientation="vertical" android:id="@id/zoom_controls" android:background="@drawable/bg_rounded_transparent" android:layout_width="36.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <ImageView android:id="@id/go_back" android:src="@drawable/ic_back" style="@style/ItemBarIcon.Vertical" />
+        <ImageView android:id="@id/fullscreen" android:src="@drawable/ic_contract" style="@style/ItemBarIcon.Vertical" />
+        <ImageView android:id="@id/zoom_in" android:src="@drawable/ic_zoom_in" style="@style/ItemBarIcon.Vertical" />
+        <ImageView android:id="@id/zoom_out" android:src="@drawable/ic_zoom_out" style="@style/ItemBarIcon.Vertical" />
+    </LinearLayout>
+</FrameLayout>

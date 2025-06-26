@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/checkbox_selection" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center|left" android:layout_marginLeft="0.0dip" android:src="@drawable/ic_feed_default" style="@style/RowIcon" />
+        <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" />
+        <CheckBox android:layout_gravity="center|right" android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/spinner_selection" android:paddingTop="@dimen/space_small" android:paddingBottom="@dimen/space_small" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center|left" android:layout_marginLeft="0.0dip" android:src="@drawable/ic_feed_default" style="@style/RowIcon" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/spinner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/space_small" android:text="@string/sub_display_prompt" android:maxLines="1" style="?textLabel" />
+            <Spinner android:id="@id/spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_category_cache">
+        <ListPreference android:entries="@array/cache_location_labels" android:title="@string/preference_cache_db_location_title" android:key="db_cache_location" android:summary="@string/preference_cache_db_location_summary" android:defaultValue="local" android:dialogTitle="@string/preference_cache_db_location_title" android:entryValues="@array/cache_location_values" />
+        <PreferenceScreen android:title="@string/preference_cache_offline_location_title" android:key="preference_offline_storage" android:summary="@string/preference_cache_offline_location_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_auto_cleanup">
+        <ListPreference android:entries="@array/cache_auto_cleanup_read_labels" android:title="@string/preference_cache_auto_cleanup_read_title" android:key="cache_auto_clean_read" android:summary="@string/preference_cache_auto_cleanup_read_summary" android:defaultValue="1" android:dialogTitle="@string/preference_cache_auto_cleanup_read_title" android:entryValues="@array/cache_auto_cleanup_read_values" />
+        <ListPreference android:entries="@array/cache_auto_cleanup_unread_labels" android:title="@string/preference_cache_auto_cleanup_unread_title" android:key="cache_auto_clean_unread" android:summary="@string/preference_cache_auto_cleanup_unread_summary" android:defaultValue="-1" android:dialogTitle="@string/preference_cache_auto_cleanup_unread_title" android:entryValues="@array/cache_auto_cleanup_unread_values" />
+        <CheckBoxPreference android:title="@string/preference_cache_keep_starred_title" android:key="cache_keep_starred" android:summary="@string/preference_cache_keep_starred_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_cache_keep_cached_title" android:key="cache_keep_cached" android:summary="@string/preference_cache_keep_cached_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_image_cache">
+        <ListPreference android:entries="@array/cache_auto_cleanup_images_labels" android:title="@string/preference_cache_auto_cleanup_images_title" android:key="cache_auto_cleanup_images" android:summary="@string/preference_cache_auto_cleanup_images_summary" android:defaultValue="1000" android:dialogTitle="@string/preference_cache_auto_cleanup_images_title" android:entryValues="@array/cache_auto_cleanup_images_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_item_info" android:title="" app:actionLayout="@layout/actionbar_item_view" app:showAsAction="always" />
+    <item android:id="@id/menu_download" android:title="@string/menu_save_page" app:showAsAction="never" />
+    <item android:id="@id/menu_tag" android:title="@string/menu_tag" app:showAsAction="never" />
+    <item android:id="@id/menu_image_fit" android:title="@string/menu_image_screen_fit" />
+    <item android:id="@id/menu_inverse_page" android:title="@string/menu_inverse_page" app:showAsAction="never" />
+    <group android:checkableBehavior="all">
+        <item android:id="@id/menu_load_images" android:title="@string/menu_image_show" />
+    </group>
+    <item android:id="@id/menu_fonts" android:title="@string/menu_fonts" app:showAsAction="never" />
+    <item android:id="@id/menu_controls" android:title="@string/preference_article_controls" app:showAsAction="never" />
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar_actionbar" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="144.0dip" android:src="@drawable/logo_feedly" android:adjustViewBounds="true" android:contentDescription="@string/client_feedly" />
+            <TextView android:textColor="#ff333333" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip" android:text="@string/feedly_login_welcome" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff333333" android:layout_gravity="center_horizontal" android:id="@id/website" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/feedly_website" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@id/btn_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/txt_login" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

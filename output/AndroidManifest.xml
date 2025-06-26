@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="auto" package="com.noinnion.android.greader.reader" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+    </queries>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.noinnion.android.greader.ReaderApp" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:configChanges="keyboardHidden" android:name="com.noinnion.android.greader.ui.login.LoginActivity" android:theme="@style/AppTheme.Launcher" android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/client_feedly" android:launchMode="singleTop" android:name="com.noinnion.android.greader.ui.login.FeedlyLoginActivity" android:theme="@style/AppTheme.Default.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="feedly" android:scheme="greader"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/client_old_reader" android:name="com.noinnion.android.greader.ui.login.OldReaderLoginActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/client_inoreader" android:name="com.noinnion.android.greader.ui.login.InoreaderLoginActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/client_rss_reader" android:name="com.noinnion.android.greader.ui.login.RssReaderLoginActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden" android:exported="true" android:name="com.noinnion.android.greader.ui.home.HomeActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.noinnion.android.greader.ui.home.HomeTabletActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.item.ItemActivity" android:theme="@style/AppTheme.Transparent"/>
+        <activity android:configChanges="keyboardHidden" android:name="com.noinnion.android.greader.ui.setting.SettingsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.home.WelcomeActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.premium.PremiumActivity" android:theme="@style/AppTheme.Dark.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.subscription.ManageSourcesActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/sub_add_subscription" android:name="com.noinnion.android.greader.ui.subscription.SubscribeActivity" android:theme="@style/AppTheme.Default.Dialog" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.subscription.ImportOpmlActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.setting.SendLogActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleInstance" android:name="com.noinnion.android.greader.ui.download.DownloadFeedActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.noinnion.android.greader.ui.download.DownloadActivity" android:theme="@style/AppTheme.Default.Dialog" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.noinnion.android.greader.ui.tts.TtsActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.provider" android:exported="true" android:name="com.noinnion.android.greader.provider.ReaderProvider"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.localfile" android:name="com.noinnion.android.greader.provider.LocalFileProvider"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.imageloader" android:exported="true" android:name="com.noinnion.android.reader.provider.ImageLoaderProvider"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <service android:name="com.noinnion.android.greader.service.SyncService"/>
+        <service android:name="com.noinnion.android.greader.service.CleanService"/>
+        <service android:name="com.noinnion.android.greader.service.FeedService"/>
+        <service android:name="com.noinnion.android.greader.service.DownloadService"/>
+        <service android:name="com.noinnion.android.greader.service.TtsService"/>
+        <service android:name="com.noinnion.android.greader.ui.widget.WidgetService"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.widget.provider" android:name="com.noinnion.android.greader.ui.widget.WidgetProvider"/>
+        <receiver android:exported="true" android:name="com.noinnion.android.greader.ui.widget.WidgetUpdateReceiver">
+            <intent-filter>
+                <action android:name="com.noinnion.android.greader.reader.action.WIDGET_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.noinnion.android.greader.ui.widget.WidgetIconConfigure" android:noHistory="true" android:theme="@style/AppTheme.Default.Dialog">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/widget_label_icon" android:name="com.noinnion.android.greader.ui.widget.WidgetIconProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_icon"/>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.noinnion.android.greader.ui.widget.WidgetSmallConfigureActivity" android:noHistory="true" android:theme="@style/AppTheme.Default.Dialog">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/widget_label_small" android:name="com.noinnion.android.greader.ui.widget.WidgetSmallProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_small"/>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.noinnion.android.greader.ui.widget.WidgetMediumConfigureActivity" android:noHistory="true" android:theme="@style/AppTheme.Default.Dialog">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/widget_label_medium" android:name="com.noinnion.android.greader.ui.widget.WidgetMediumProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_medium"/>
+        </receiver>
+        <activity android:launchMode="singleTop" android:name="com.noinnion.android.greader.ui.widget.WidgetLargeConfigureActivity" android:noHistory="true" android:theme="@style/AppTheme.Default.Dialog">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:label="@string/widget_label_large" android:name="com.noinnion.android.greader.ui.widget.WidgetLargeProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_large"/>
+            <meta-data android:name="LauncherMetadata.Requirements.APIVersion" android:value="2"/>
+            <meta-data android:name="LauncherMetadata.Requirements.Scrollable" android:value="true"/>
+        </receiver>
+        <service android:enabled="@bool/isHoneyComb" android:exported="false" android:name="com.noinnion.android.greader.ui.widget.WidgetLargeV11Service" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <activity android:launchMode="singleInstance" android:name="com.noinnion.android.greader.ui.media.MusicActivity" android:theme="@style/AppTheme.Default.Dialog"/>
+        <service android:exported="false" android:name="com.noinnion.android.greader.ui.media.MusicService">
+            <intent-filter>
+                <action android:name="com.noinnion.android.greader.reader.action.TOGGLE_PLAYBACK"/>
+                <action android:name="com.noinnion.android.greader.reader.action.PLAY"/>
+                <action android:name="com.noinnion.android.greader.reader.action.PAUSE"/>
+                <action android:name="com.noinnion.android.greader.reader.action.FORWARD"/>
+                <action android:name="com.noinnion.android.greader.reader.action.REWIND"/>
+                <action android:name="com.noinnion.android.greader.reader.action.STOP"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.noinnion.android.greader.reader.action.URL"/>
+                <data android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.noinnion.android.greader.reader.action.PATH"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.noinnion.android.greader.ui.media.MusicIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.noinnion.android.greader.receiver.ScheduleReceiver"/>
+        <receiver android:name="com.noinnion.android.greader.receiver.OnUpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:path="com.noinnion.android.greader.reader" android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.noinnion.android.greader.receiver.OnBootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="false"/>
+        <activity android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.noinnion.android.greader.ui.locale.LocaleEditActivity">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.noinnion.android.greader.ui.locale.LocaleFireReceiver">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING"/>
+            </intent-filter>
+        </receiver>
+        <service android:icon="@drawable/icon_white" android:label="@string/app_name" android:name="com.noinnion.android.greader.dashclock.UnreadExtension" android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension"/>
+            </intent-filter>
+            <meta-data android:name="protocolVersion" android:value="2"/>
+            <meta-data android:name="worldReadable" android:value="true"/>
+            <meta-data android:name="description" android:value="@string/dashclock_extension_description"/>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-6875289151086704~1486326566"/>
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="632.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="598.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="632.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="598.0dip"/>
+        <meta-data android:name="com.lge.support.SPLIT_WINDOW" android:value="true"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.noinnion.android.reader.ui.dialog.YoutubePlayerActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@style/AppTheme.Black.Transparent"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.ktx.FirebaseInAppMessagingDisplayKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.ktx.FirebaseInAppMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.ktx.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="com.noinnion.android.greader.reader.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <provider android:authorities="com.noinnion.android.greader.reader.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.nl.languageid.LanguageIdRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.noinnion.android.greader.reader.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.3"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_category_ui">
+        <ListPreference android:entries="@array/application_language_labels" android:title="@string/preference_application_language_title" android:key="application_language" android:defaultValue="" android:dialogTitle="@string/preference_application_language_title" android:entryValues="@array/application_language_values" />
+        <ListPreference android:entries="@array/application_theme_labels" android:title="@string/preference_application_theme_title" android:key="application_theme" android:defaultValue="0" android:dialogTitle="@string/preference_application_theme_title" android:entryValues="@array/application_theme_values" />
+        <CheckBoxPreference android:title="@string/preference_application_theme_auto_dark_title" android:key="application_theme_auto_dark" android:summary="@string/preference_application_theme_auto_dark_summary" android:defaultValue="true" />
+        <ListPreference android:entries="@array/application_theme_dark_labels" android:title="@string/preference_application_theme_dark_title" android:key="application_theme_dark" android:summary="@string/preference_application_theme_dark_summary" android:defaultValue="1" android:dialogTitle="@string/preference_application_theme_title" android:entryValues="@array/application_theme_dark_values" />
+        <CheckBoxPreference android:title="@string/preference_application_fullscreen_title" android:key="fullscreen" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_home_view" android:key="preference_category_home_view">
+        <CheckBoxPreference android:title="@string/preference_use_phone_ui_title" android:key="use_phone_ui" android:summary="@string/preference_use_phone_ui_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preference_home_landscape_dual_pane_title" android:key="home_landscape_dual_pane" android:summary="@string/preference_home_landscape_dual_pane_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_home_hide_article_list_title" android:key="home_hide_article_list" android:summary="@string/preference_home_hide_article_list_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_article_list">
+        <PreferenceScreen android:title="@string/preference_rich_article_list" android:key="rich_list" />
+        <PreferenceScreen android:title="@string/preference_item_list_action_title" android:key="quick_actions" />
+        <ListPreference android:entries="@array/item_list_volume_key_action_labels" android:title="@string/preference_item_list_volume_key_action_title" android:key="item_list_volume_key_action" android:summary="@string/preference_item_list_volume_key_action_summary" android:defaultValue="1" android:dialogTitle="@string/preference_item_list_volume_key_action_title" android:entryValues="@array/item_list_volume_key_action_values" />
+        <ListPreference android:entries="@array/item_list_font_size_labels" android:title="@string/preference_view_item_list_font_size_title" android:key="item_list_font_size" android:summary="@string/preference_view_item_list_font_size_summary" android:defaultValue="16" android:dialogTitle="@string/preference_view_item_list_font_size_title" android:entryValues="@array/item_list_font_size_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_article_view" android:key="preference_category_article_view">
+        <ListPreference android:entries="@array/item_nav_bar_labels" android:title="@string/preference_view_nav_bar_title" android:key="item_nav_bar" android:summary="@string/preference_view_nav_bar_summary" android:defaultValue="1" android:dialogTitle="@string/preference_view_nav_bar_title" android:entryValues="@array/item_nav_bar_values" />
+        <CheckBoxPreference android:enabled="@bool/isHoneyComb" android:title="@string/preference_item_pinch_zoom_title" android:key="item_pinch_zoom" android:summary="@string/preference_item_pinch_zoom_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:enabled="@bool/isHoneyComb" android:title="@string/preference_hardware_acceleration_title" android:key="item_hardware_accelerated" android:summary="@string/preference_hardware_acceleration_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

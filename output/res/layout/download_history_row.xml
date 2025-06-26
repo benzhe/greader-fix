@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/row" style="?listRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" style="@style/RowIcon" />
+    <TextView android:id="@id/title" android:layout_toRightOf="@id/icon" android:layout_alignParentRight="true" style="?listRowTitle" />
+    <TextView android:id="@id/modified" android:layout_toRightOf="@id/icon" android:layout_below="@id/title" style="?listRowSummary" />
+</RelativeLayout>

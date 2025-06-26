@@ -1,0 +1,85 @@
+package com.noinnion.android.reader;
+
+/* loaded from: classes2.dex */
+public final class R$array {
+    public static final int application_language_labels = 2130903040;
+    public static final int application_language_values = 2130903041;
+    public static final int application_theme_dark_labels = 2130903042;
+    public static final int application_theme_dark_values = 2130903043;
+    public static final int application_theme_labels = 2130903044;
+    public static final int application_theme_values = 2130903045;
+    public static final int cache_auto_cleanup_images_labels = 2130903046;
+    public static final int cache_auto_cleanup_images_values = 2130903047;
+    public static final int cache_auto_cleanup_read_labels = 2130903048;
+    public static final int cache_auto_cleanup_read_values = 2130903049;
+    public static final int cache_auto_cleanup_unread_labels = 2130903050;
+    public static final int cache_auto_cleanup_unread_values = 2130903051;
+    public static final int cache_location_labels = 2130903052;
+    public static final int cache_location_values = 2130903053;
+    public static final int connection_options_labels = 2130903054;
+    public static final int connection_options_values = 2130903055;
+    public static final int default_color_choice_values = 2130903056;
+    public static final int fab_position_labels = 2130903057;
+    public static final int fab_position_values = 2130903058;
+    public static final int fab_style_labels = 2130903059;
+    public static final int fab_style_values = 2130903060;
+    public static final int fab_targets_left = 2130903061;
+    public static final int fab_targets_right = 2130903062;
+    public static final int feed_sort_type_labels = 2130903063;
+    public static final int feed_view_labels = 2130903064;
+    public static final int feedback_labels = 2130903065;
+    public static final int font_labels = 2130903066;
+    public static final int item_double_tab_action_labels = 2130903067;
+    public static final int item_double_tab_action_values = 2130903068;
+    public static final int item_list_action_labels = 2130903069;
+    public static final int item_list_action_values = 2130903070;
+    public static final int item_list_font_size_labels = 2130903071;
+    public static final int item_list_font_size_values = 2130903072;
+    public static final int item_list_view_labels = 2130903073;
+    public static final int item_list_volume_key_action_labels = 2130903074;
+    public static final int item_list_volume_key_action_values = 2130903075;
+    public static final int item_load_link_labels = 2130903076;
+    public static final int item_load_link_values = 2130903077;
+    public static final int item_nav_bar_labels = 2130903078;
+    public static final int item_nav_bar_values = 2130903079;
+    public static final int item_send_to_labels = 2130903080;
+    public static final int item_send_to_values = 2130903081;
+    public static final int item_sort_type_labels = 2130903082;
+    public static final int locale_action_labels = 2130903083;
+    public static final int navigation_gesture_labels = 2130903084;
+    public static final int navigation_gesture_values = 2130903085;
+    public static final int offline_auto_readability_labels = 2130903086;
+    public static final int offline_auto_readability_values = 2130903087;
+    public static final int offline_feed_items_limit_labels = 2130903088;
+    public static final int offline_feed_items_limit_values = 2130903089;
+    public static final int offline_full_content_labels = 2130903090;
+    public static final int offline_full_content_values = 2130903091;
+    public static final int service_tts_labels = 2130903092;
+    public static final int service_tts_values = 2130903093;
+    public static final int sub_display_content_labels = 2130903094;
+    public static final int sub_load_link_labels = 2130903095;
+    public static final int sub_offline_reading_labels = 2130903096;
+    public static final int sub_reading_mode_labels = 2130903097;
+    public static final int sub_user_agent_labels = 2130903098;
+    public static final int swipe_action_labels = 2130903099;
+    public static final int swipe_action_values = 2130903100;
+    public static final int sync_interval_hours_labels = 2130903101;
+    public static final int sync_interval_hours_values = 2130903102;
+    public static final int sync_item_limit_labels = 2130903103;
+    public static final int sync_item_limit_values = 2130903104;
+    public static final int translation_language_labels = 2130903105;
+    public static final int translation_language_values = 2130903106;
+    public static final int tts_labels = 2130903107;
+    public static final int user_agent_labels = 2130903108;
+    public static final int user_agent_values = 2130903109;
+    public static final int volume_key_action_labels = 2130903110;
+    public static final int volume_key_action_values = 2130903111;
+    public static final int widget_background_opacity_labels = 2130903112;
+    public static final int widget_background_opacity_values = 2130903113;
+    public static final int widget_item_limit_labels = 2130903114;
+    public static final int widget_scroll_speed_labels = 2130903115;
+    public static final int widget_scroll_speed_values = 2130903116;
+
+    private R$array() {
+    }
+}

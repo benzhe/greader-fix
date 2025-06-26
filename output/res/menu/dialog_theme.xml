@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_theme_default" android:id="@id/theme_default" android:title="@string/array_theme_default" />
+    <item android:icon="@drawable/ic_theme_green" android:id="@id/theme_green" android:title="@string/array_theme_green" />
+    <item android:icon="@drawable/ic_theme_sepia" android:id="@id/theme_sepia" android:title="@string/array_theme_sepia" />
+    <item android:icon="@drawable/ic_theme_dark" android:id="@id/theme_dark" android:title="@string/array_theme_dark" />
+    <item android:icon="@drawable/ic_theme_black" android:id="@id/theme_black" android:title="@string/array_theme_black" />
+    <group>
+        <item android:icon="@drawable/ic_theme_light_dark" android:id="@id/theme_auto_dark" android:title="@string/preference_application_theme_auto_dark_title" />
+    </group>
+</menu>

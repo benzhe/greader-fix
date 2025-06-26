@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar_actionbar_with_subtitle" />
+    <net.simonvt.menudrawer.SlidingDrawer android:orientation="vertical" android:id="@id/drawer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar" android:layout_alignParentBottom="true" app:mdMenuBackground="?colorBackground" app:mdPosition="left">
+        <FrameLayout android:id="@id/mdMenu" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/mdContent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </net.simonvt.menudrawer.SlidingDrawer>
+    <include layout="@layout/toolbar_actionbar_shadow" />
+</RelativeLayout>

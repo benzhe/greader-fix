@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/preference_item_list_action_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_item_list_action_title">
+        <ListPreference android:entries="@array/item_list_action_labels" android:title="@string/preference_item_list_left_action_title" android:key="item_list_left_action" android:summary="@string/preference_item_list_left_action_summary" android:defaultValue="3" android:dialogTitle="@string/preference_item_list_left_action_title" android:entryValues="@array/item_list_action_values" />
+        <ListPreference android:entries="@array/item_list_action_labels" android:title="@string/preference_item_list_right_action_title" android:key="item_list_right_action" android:summary="@string/preference_item_list_right_action_summary" android:defaultValue="1" android:dialogTitle="@string/preference_item_list_right_action_title" android:entryValues="@array/item_list_action_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_swipe_action_title">
+        <ListPreference android:entries="@array/swipe_action_labels" android:title="@string/preference_swipe_ltr_title" android:key="item_list_swipe_action_ltr" android:summary="@string/preference_swipe_ltr_summary" android:defaultValue="0" android:dialogTitle="@string/preference_swipe_ltr_title" android:entryValues="@array/swipe_action_values" />
+        <ListPreference android:entries="@array/swipe_action_labels" android:title="@string/preference_swipe_rtl_title" android:key="item_list_swipe_action_rtl" android:summary="@string/preference_swipe_rtl_summary" android:defaultValue="0" android:dialogTitle="@string/preference_swipe_rtl_title" android:entryValues="@array/swipe_action_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

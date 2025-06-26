@@ -1,0 +1,26 @@
+package defpackage;
+
+import android.view.View;
+import com.android.billingclient.api.SkuDetails;
+import com.noinnion.android.greader.ui.premium.PremiumActivity;
+
+/* loaded from: classes2.dex */
+public final class ks6 implements View.OnClickListener {
+    public final /* synthetic */ PremiumActivity e;
+    public final /* synthetic */ SkuDetails f;
+    public final /* synthetic */ po6 g;
+
+    public ks6(PremiumActivity premiumActivity, SkuDetails skuDetails, po6 po6Var) {
+        this.e = premiumActivity;
+        this.f = skuDetails;
+        this.g = po6Var;
+    }
+
+    @Override // android.view.View.OnClickListener
+    public final void onClick(View view) {
+        PremiumActivity premiumActivity = this.e;
+        SkuDetails skuDetails = this.f;
+        int i = PremiumActivity.E;
+        premiumActivity.C(skuDetails);
+    }
+}

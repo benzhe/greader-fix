@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dialog_frame_margin" android:paddingTop="@dimen/dialog_content_padding_top" android:paddingRight="@dimen/dialog_frame_margin" android:paddingBottom="@dimen/dialog_content_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/translate_title" style="?textLabel" />
+    <Spinner android:id="@id/offline_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_category_mark_as_read" android:key="preference_category_mark_read">
+        <ListPreference android:entries="@array/fab_position_labels" android:title="@string/preference_fab_position_title" android:key="fab_position" android:defaultValue="2" android:dialogTitle="@string/preference_fab_position_title" android:entryValues="@array/fab_position_values" />
+        <ListPreference android:entries="@array/fab_style_labels" android:title="@string/preference_fab_style_title" android:key="fab_style" android:defaultValue="1" android:dialogTitle="@string/preference_fab_style_title" android:entryValues="@array/fab_style_values" />
+        <ListPreference android:entries="@array/widget_background_opacity_labels" android:title="@string/preference_fab_opacity_title" android:key="fab_opacity" android:defaultValue="100" android:dialogTitle="@string/preference_fab_opacity_title" android:entryValues="@array/widget_background_opacity_values" />
+        <CheckBoxPreference android:title="@string/preference_show_feeds_after_mark_all_title" android:key="show_feeds_after_mark_all" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_category_confirmation">
+        <CheckBoxPreference android:title="@string/label_all" android:key="confirm_mark_as_read_all" android:summary="@string/preference_confirmation_all_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_confirmation_sub_title" android:key="confirm_mark_as_read_sub" android:summary="@string/preference_confirmation_sub_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

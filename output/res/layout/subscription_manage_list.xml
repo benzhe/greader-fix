@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/manage_list" android:background="?colorBackground" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/row_manage_sources" android:background="?buttonBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="52.0dip">
+            <ImageView android:padding="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_feed_all" android:layout_centerVertical="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:text="@string/menu_manage_sources" android:layout_centerVertical="true" style="?listRowTitle" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/row_downloads" android:background="?buttonBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="52.0dip">
+            <ImageView android:padding="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_download" android:layout_centerVertical="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:text="@string/menu_downloads" android:layout_centerVertical="true" style="?listRowTitle" />
+        </RelativeLayout>
+        <View style="@style/Seperator" />
+        <RelativeLayout android:id="@id/row_podcast" android:background="?buttonBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="52.0dip">
+            <ImageView android:padding="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_podcast" android:layout_centerVertical="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:text="@string/label_podcast" android:layout_centerVertical="true" style="?listRowTitle" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/row_saved_items" android:background="?buttonBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="52.0dip">
+            <ImageView android:padding="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_saved" android:layout_centerVertical="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:text="@string/label_saved" android:layout_centerVertical="true" style="?listRowTitle" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/row_starred" android:background="?buttonBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="52.0dip">
+            <ImageView android:padding="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_star" android:layout_centerVertical="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:text="@string/label_starred" android:layout_centerVertical="true" style="?listRowTitle" />
+        </RelativeLayout>
+        <View style="@style/Seperator" />
+        <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <View style="@style/Seperator" />
+        <RelativeLayout android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="52.0dip">
+            <ImageView android:padding="4.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_feed_default" android:layout_centerVertical="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:text="@string/view_feeds_only" android:layout_centerVertical="true" style="?listRowTitle" />
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/feed_only" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

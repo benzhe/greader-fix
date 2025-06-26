@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_text_to_speech" android:key="preference_tts_voices">
+        <CheckBoxPreference android:title="@string/preference_tts_auto_detect_language" android:key="service_tts_auto_detect_language" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/menu_tts_read_title" android:key="service_tts_read_title" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/menu_mark_read" android:key="service_tts_mark_read" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar_actionbar" />
+    <com.noinnion.android.widget.TouchListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:layout_weight="1.0" tlv:dragndrop_background="@color/holo_blue_highlight" tlv:expanded_height="48.0dip" tlv:grabber="@id/icon" tlv:normal_height="48.0dip" tlv:remove_mode="none" xmlns:tlv="http://schemas.android.com/apk/res-auto" />
+    <LinearLayout style="?buttonBarDialog">
+        <Button android:id="@id/ok_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/ok" android:layout_weight="1.0" style="?buttonBarDialogButton" />
+    </LinearLayout>
+</LinearLayout>

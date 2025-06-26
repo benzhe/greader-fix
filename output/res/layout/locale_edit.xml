@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar_actionbar" />
+    <LinearLayout android:gravity="center_vertical" android:background="?colorPrimaryDark" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_bar_apps" />
+        <Spinner android:id="@id/action_spinner" android:layout_width="fill_parent" android:layout_height="48.0dip" android:drawSelectorOnTop="true" style="?actionDropDownStyle" />
+    </LinearLayout>
+    <LinearLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0px" android:layout_height="0.0px" />
+    <ScrollView android:id="@id/settings" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_synchronization" />
+            <Spinner android:id="@id/sync_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preference_category_offline_reading" />
+            <Spinner android:id="@id/offline_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preference_category_notification" />
+            <Spinner android:id="@id/notification_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preference_application_theme_title" />
+            <Spinner android:id="@id/theme_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+        </LinearLayout>
+    </ScrollView>
+    <ExpandableListView android:id="@android:id/list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="?expandableListView" />
+    <LinearLayout style="?buttonBar">
+        <Button android:id="@id/cancel_button" android:text="@android:string/cancel" android:layout_marginEnd="@dimen/space_small" style="?buttonBarButton" />
+        <Button android:id="@id/ok_button" android:text="@android:string/ok" android:layout_marginStart="@dimen/space_small" style="?buttonBarButton" />
+    </LinearLayout>
+</LinearLayout>

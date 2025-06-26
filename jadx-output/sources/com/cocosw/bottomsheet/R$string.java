@@ -1,0 +1,10 @@
+package com.cocosw.bottomsheet;
+
+/* loaded from: classes.dex */
+public final class R$string {
+    public static final int bs_more = 2131820682;
+    public static final int status_bar_notification_info_overflow = 2131821322;
+
+    private R$string() {
+    }
+}

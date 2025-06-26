@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/preference_item_load_images_title" />
+        <Spinner android:id="@id/load_images_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/preference_item_user_agent_title" />
+        <Spinner android:id="@id/user_agent_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" />
+        <CheckBox android:id="@id/inverse_page" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_inverse_page" />
+    </LinearLayout>
+    <LinearLayout style="?buttonBar">
+        <Button android:id="@id/cancel" android:text="@android:string/cancel" android:layout_marginEnd="@dimen/space_small" style="?buttonBarButton" />
+        <Button android:id="@id/ok" android:text="@android:string/ok" android:layout_marginStart="@dimen/space_small" style="?buttonBarButton" />
+    </LinearLayout>
+</LinearLayout>

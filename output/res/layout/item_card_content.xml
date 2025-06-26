@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noinnion.android.reader.ui.view.CheckableItemCardLayout android:id="@id/row" android:background="@null" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/left_action" android:visibility="visible" android:layout_alignParentStart="true" style="@style/ListRowActionIcon" />
+    <View android:id="@id/left_filler" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_toEndOf="@id/left_action" />
+    <ImageView android:id="@id/icon_unread" android:src="@drawable/ic_item_unread" android:layout_toEndOf="@id/left_filler" style="@style/ListRowSubIcon" />
+    <ImageView android:id="@id/icon_starred" android:visibility="gone" android:src="@drawable/ic_star" android:layout_toEndOf="@id/icon_unread" style="@style/ListRowSubIcon" />
+    <ImageView android:id="@id/icon_podcast" android:visibility="gone" android:src="@drawable/ic_podcast" android:layout_toEndOf="@id/icon_starred" style="@style/ListRowSubIcon" />
+    <ImageView android:id="@id/icon_cached" android:visibility="gone" android:src="@drawable/ic_saved" android:layout_toEndOf="@id/icon_podcast" style="@style/ListRowSubIcon" />
+    <ImageView android:id="@id/right_action" android:visibility="gone" android:layout_alignParentEnd="true" style="@style/ListRowActionIcon" />
+    <View android:id="@id/right_filler" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_toStartOf="@id/right_action" />
+    <TextView android:id="@id/time" android:layout_marginTop="5.0dip" android:layout_toStartOf="@id/right_filler" style="?listRowTime" />
+    <TextView android:id="@id/channel" android:singleLine="true" android:layout_alignTop="@id/time" android:layout_alignWithParentIfMissing="true" android:layout_toStartOf="@id/time" android:layout_toEndOf="@id/icon_cached" style="?listRowSubTitle" />
+    <TextView android:textStyle="bold" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="7.0dip" android:singleLine="false" android:layout_below="@id/time" style="?listRowTitle" />
+    <TextView android:id="@id/summary" android:layout_width="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="7.0dip" android:maxLines="5" android:singleLine="false" android:layout_below="@id/title" style="?listRowSummary" />
+    <ImageView android:id="@id/thumb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:maxHeight="500.0dip" android:minHeight="150.0dip" android:layout_below="@id/title" />
+    <ImageView android:id="@id/badge" android:padding="@dimen/space_small" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="@dimen/space_normal" android:src="@drawable/ic_gif_overlay" android:layout_alignTop="@id/thumb" android:layout_marginEnd="@dimen/space_normal" android:layout_alignEnd="@id/thumb" />
+</com.noinnion.android.reader.ui.view.CheckableItemCardLayout>

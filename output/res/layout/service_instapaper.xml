@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dialog_frame_margin" android:paddingTop="@dimen/dialog_content_padding_top" android:paddingRight="@dimen/dialog_frame_margin" android:paddingBottom="@dimen/dialog_content_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/service_login_message" />
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:hint="@string/login_id" android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/login_password" android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preference_sync_notifiable_title">
+        <CheckBoxPreference android:title="@string/preference_sync_notifiable_title" android:key="sync_notifiable" android:summary="@string/preference_sync_notifiable_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/preference_sync_notify_sound_title" android:key="sync_notify_sound" android:summary="@string/preference_sync_notify_sound_summary" android:dependency="sync_notifiable" />
+        <RingtonePreference android:title="@string/preference_sync_notify_sound_ringtone_title" android:key="sync_notify_sound_ringtone" android:summary="@string/preference_sync_notify_sound_ringtone_summary" android:dependency="sync_notifiable" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="notification" android:showDefault="true" android:showSilent="false" />
+        <CheckBoxPreference android:title="@string/preference_sync_notify_vibarate_title" android:key="sync_notify_vibrate" android:summary="@string/preference_sync_notify_vibrate_summary" android:dependency="sync_notifiable" />
+        <CheckBoxPreference android:title="@string/preference_sync_notify_led_title" android:key="sync_notify_led" android:summary="@string/preference_sync_notify_led_summary" android:dependency="sync_notifiable" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/preference_sync_notifiable_custom_title">
+        <CheckBoxPreference android:title="@string/preference_sync_notifiable_custom_title" android:key="sync_notifiable_custom" android:summary="@string/preference_sync_notifiable_custom_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/preference_sync_notify_sound_title" android:key="sync_notify_custom_sound" android:summary="@string/preference_sync_notify_sound_summary" android:dependency="sync_notifiable_custom" />
+        <RingtonePreference android:title="@string/preference_sync_notify_sound_ringtone_title" android:key="sync_notify_custom_sound_ringtone" android:summary="@string/preference_sync_notify_sound_ringtone_summary" android:dependency="sync_notifiable_custom" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="notification" android:showDefault="true" android:showSilent="false" />
+        <CheckBoxPreference android:title="@string/preference_sync_notify_vibarate_title" android:key="sync_notify_custom_vibrate" android:summary="@string/preference_sync_notify_vibrate_summary" android:dependency="sync_notifiable_custom" />
+        <CheckBoxPreference android:title="@string/preference_sync_notify_led_title" android:key="sync_notify_custom_led" android:summary="@string/preference_sync_notify_led_summary" android:dependency="sync_notifiable_custom" />
+    </PreferenceCategory>
+</PreferenceScreen>

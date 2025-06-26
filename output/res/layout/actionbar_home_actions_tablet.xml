@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="?actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.SwitchCompat android:id="@id/switch_unread" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:thumb="?switchUnread" />
+    <com.noinnion.android.view.TintableImageView android:id="@id/sync_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_menu_sync" android:scaleType="center" app:tiv_tint="?colorControlNormal" style="?actionButtonStyle" />
+    <com.noinnion.android.view.TintableImageView android:id="@id/sync_cancel_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_menu_cancel" android:scaleType="center" app:tiv_tint="?colorControlNormal" style="?actionButtonStyle" />
+    <com.noinnion.android.view.TintableImageView android:id="@id/mark_read_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_menu_check" android:scaleType="center" app:tiv_tint="?colorControlNormal" style="?actionButtonStyle" />
+    <com.noinnion.android.view.TintableImageView android:id="@id/search_view" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/abc_ic_search_api_material" android:scaleType="center" app:tiv_tint="?colorControlNormal" style="?actionButtonStyle" />
+</LinearLayout>

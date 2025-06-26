@@ -1,0 +1,51 @@
+.class public final Lqn6$a;
+.super Lqn6;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lqn6;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, p2, v0}, Lqn6;-><init>(Ljava/lang/String;ILgm7;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public i()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public k()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ad_banner_format_native"
+
+    return-object v0
+.end method

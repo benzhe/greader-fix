@@ -1,0 +1,43 @@
+package androidx.gridlayout;
+
+/* loaded from: classes.dex */
+public final class R$attr {
+    public static final int alignmentMode = 2130968627;
+    public static final int alpha = 2130968633;
+    public static final int columnCount = 2130968831;
+    public static final int columnOrderPreserved = 2130968832;
+    public static final int coordinatorLayoutStyle = 2130968857;
+    public static final int font = 2130969026;
+    public static final int fontProviderAuthority = 2130969029;
+    public static final int fontProviderCerts = 2130969030;
+    public static final int fontProviderFetchStrategy = 2130969031;
+    public static final int fontProviderFetchTimeout = 2130969032;
+    public static final int fontProviderPackage = 2130969033;
+    public static final int fontProviderQuery = 2130969034;
+    public static final int fontStyle = 2130969035;
+    public static final int fontVariationSettings = 2130969036;
+    public static final int fontWeight = 2130969037;
+    public static final int keylines = 2130969136;
+    public static final int layout_anchor = 2130969145;
+    public static final int layout_anchorGravity = 2130969146;
+    public static final int layout_behavior = 2130969147;
+    public static final int layout_column = 2130969150;
+    public static final int layout_columnSpan = 2130969151;
+    public static final int layout_columnWeight = 2130969152;
+    public static final int layout_dodgeInsetEdges = 2130969195;
+    public static final int layout_gravity = 2130969204;
+    public static final int layout_insetEdge = 2130969205;
+    public static final int layout_keyline = 2130969206;
+    public static final int layout_row = 2130969208;
+    public static final int layout_rowSpan = 2130969209;
+    public static final int layout_rowWeight = 2130969210;
+    public static final int orientation = 2130969365;
+    public static final int rowCount = 2130969447;
+    public static final int rowOrderPreserved = 2130969448;
+    public static final int statusBarBackground = 2130969521;
+    public static final int ttcIndex = 2130969672;
+    public static final int useDefaultMargins = 2130969674;
+
+    private R$attr() {
+    }
+}
