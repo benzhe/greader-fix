@@ -1,4 +1,4 @@
-apktool b ../
+../../apktool/apktool b ../
 
 rm aligned.apk
 
