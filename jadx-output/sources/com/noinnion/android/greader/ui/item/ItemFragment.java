@@ -896,7 +896,7 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
         }
 
         @Override // tw6.b
-        public final void a(int i, int i2, int i3) {
+        public final void a(int i, int i2, int i3) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
             Context applicationContext;
             ItemFragment itemFragment;
             b bVar;
@@ -1241,6 +1241,10 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
                 this.l.add(Long.valueOf(ap6Var.e));
                 this.m.remove(Long.valueOf(ap6Var.e));
                 n56.X1(getActivity(), getText(R.string.item_marked_as_read));
+                Context applicationContext = getActivity().getApplicationContext();
+                if (applicationContext != null) {
+                    on6.i(applicationContext).B(new long[]{ap6Var.e}, null, null, false, true);
+                }
                 return;
             }
             ImageView imageView2 = this.u;
@@ -1250,6 +1254,10 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
             this.l.remove(Long.valueOf(ap6Var.e));
             this.m.add(Long.valueOf(ap6Var.e));
             n56.X1(getActivity(), getText(R.string.item_marked_as_unread));
+            Context applicationContext = getActivity().getApplicationContext();
+            if (applicationContext != null) {
+                on6.i(applicationContext).B(null, new long[]{ap6Var.e}, null, false, true);
+            }
         }
     }
 
@@ -1506,7 +1514,7 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
     }
 
     @Override // sd.a
-    public wd<Cursor> g(int i2, Bundle bundle) {
+    public wd<Cursor> g(int i2, Bundle bundle) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         vd vdVarU;
         vd vdVar;
         Context applicationContext;
@@ -1628,6 +1636,7 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
                 if (!ap6Var.v) {
                     this.l.add(Long.valueOf(ap6Var.e));
                     this.o.add(Long.valueOf(ap6Var.g));
+                    on6.i(getActivity().getApplicationContext()).B(new long[]{ap6Var.e}, null, null, false, true);
                 }
                 if (ap6Var.r) {
                     this.n.add(Long.valueOf(ap6Var.e));
@@ -1925,7 +1934,7 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
     }
 
     @Override // android.view.View.OnClickListener
-    public void onClick(View view) throws Resources.NotFoundException {
+    public void onClick(View view) throws IllegalAccessException, Resources.NotFoundException, IllegalArgumentException, InvocationTargetException {
         im7.e(view, "v");
         switch (view.getId()) {
             case R.id.browser /* 2131296385 */:
@@ -2107,7 +2116,7 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct add '--show-bad-code' argument
     */
-    public android.view.View onCreateView(android.view.LayoutInflater r18, android.view.ViewGroup r19, android.os.Bundle r20) {
+    public android.view.View onCreateView(android.view.LayoutInflater r18, android.view.ViewGroup r19, android.os.Bundle r20) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.reflect.InvocationTargetException {
         /*
             Method dump skipped, instructions count: 1033
             To view this dump add '--comments-level debug' option
@@ -2123,15 +2132,11 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
         if (activity != null && (applicationContext2 = activity.getApplicationContext()) != null) {
             yd.a(applicationContext2).d(this.K);
         }
-        HashSet<Long> hashSet = this.l;
-        long[] jArrB = hashSet.isEmpty() ^ true ? n56.B(hashSet) : null;
-        HashSet<Long> hashSet2 = this.m;
-        long[] jArrB2 = hashSet2.isEmpty() ^ true ? n56.B(hashSet2) : null;
         HashSet<Long> hashSet3 = this.o;
         long[] jArrB3 = hashSet3.size() != 0 ? n56.B(hashSet3) : null;
         FragmentActivity activity2 = getActivity();
         if (activity2 != null && (applicationContext = activity2.getApplicationContext()) != null) {
-            on6.i(applicationContext).B(jArrB, jArrB2, jArrB3, false, true);
+            on6.i(applicationContext).B(null, null, jArrB3, false, true);
         }
         ap6.a aVar = this.h;
         if (aVar != null && !aVar.isClosed()) {
@@ -2521,3 +2526,4 @@ public final class ItemFragment extends rw6 implements sd.a<Cursor>, View.OnClic
         return false;
     }
 }
+ 

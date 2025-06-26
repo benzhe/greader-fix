@@ -1082,12 +1082,12 @@
 .end method
 
 .method public final H()V
-    .locals 4
+    .locals 9
 
     .line 1
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->i:Lap6;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 2
     iget-object v1, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->m:Ljava/util/HashSet;
@@ -1138,6 +1138,27 @@
 
     .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    move-result-object v0
+    if-eqz v0, :cond_3
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    move-result-object v0
+    if-eqz v0, :cond_3
+    invoke-static {v0}, Lon6;->i(Landroid/content/Context;)Lep6;
+    move-result-object v3
+    const/4 v0, 0x1
+    new-array v4, v0, [J
+    const/4 v1, 0x0
+    iget-object v2, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->i:Lap6;
+    iget-wide v5, v2, Lap6;->e:J
+    aput-wide v5, v4, v1
+    const/4 v5, 0x0
+    const/4 v6, 0x0
+    const/4 v7, 0x0
+    const/4 v8, 0x1
+    invoke-virtual/range {v3 .. v8}, Lep6;->B([J[J[JZZ)V
+
+    .line 7
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -1151,7 +1172,7 @@
 
     goto :goto_0
 
-    .line 7
+    .line 8
     :cond_1
     iget-object v1, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->u:Landroid/widget/ImageView;
 
@@ -1161,9 +1182,9 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 8
+    .line 9
     :cond_2
-    iget-object v1, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->l:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->m:Ljava/util/HashSet;
 
     iget-wide v2, v0, Lap6;->e:J
 
@@ -1171,10 +1192,10 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 9
-    iget-object v1, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->m:Ljava/util/HashSet;
+    .line 10
+    iget-object v1, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->l:Ljava/util/HashSet;
 
     iget-wide v2, v0, Lap6;->e:J
 
@@ -1182,9 +1203,31 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 10
+    .line 11
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    move-result-object v0
+    if-eqz v0, :cond_3
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    move-result-object v0
+    if-eqz v0, :cond_3
+    invoke-static {v0}, Lon6;->i(Landroid/content/Context;)Lep6;
+    move-result-object v3
+    const/4 v4, 0x0
+    const/4 v0, 0x1
+    new-array v5, v0, [J
+    const/4 v1, 0x0
+    iget-object v2, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->i:Lap6;
+    iget-wide v6, v2, Lap6;->e:J
+    aput-wide v6, v5, v1
+    const/4 v6, 0x0
+    const/4 v7, 0x0
+    const/4 v8, 0x1
+    invoke-virtual/range {v3 .. v8}, Lep6;->B([J[J[JZZ)V
+
+    .line 12
+    :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1197,8 +1240,11 @@
 
     invoke-static {v0, v1}, Ln56;->X1(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
-    :cond_3
+    .line 13
+    :cond_4
     :goto_0
+    invoke-virtual {p0}, Lcom/noinnion/android/greader/ui/item/ItemFragment;->p()V
+
     return-void
 .end method
 
@@ -2877,6 +2923,28 @@
     invoke-virtual {v1, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     .line 10
+    move-object v6, v0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    move-result-object v0
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    move-result-object v0
+    invoke-static {v0}, Lon6;->i(Landroid/content/Context;)Lep6;
+    move-result-object v0
+    const/4 v2, 0x1
+    new-array v1, v2, [J
+    const/4 v2, 0x0
+    iget-wide v3, v6, Lap6;->e:J
+    aput-wide v3, v1, v2
+    const/4 v2, 0x0
+    const/4 v3, 0x0
+    const/4 v4, 0x0
+    const/4 v5, 0x1
+    invoke-virtual/range {v0 .. v5}, Lep6;->B([J[J[JZZ)V
+    move-object v0, v6
+    const/4 v2, 0x1
+    const/4 v3, 0x0
+
+    .line 11
     :cond_4
     iget-boolean v1, v0, Lap6;->r:Z
 
@@ -5771,58 +5839,13 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->l:Ljava/util/HashSet;
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    const/4 v4, 0x0
 
-    .line 5
-    invoke-static {v0}, Ln56;->B(Ljava/util/Set;)[J
-
-    move-result-object v0
-
-    move-object v4, v0
-
-    goto :goto_0
-
-    :cond_1
-    move-object v4, v2
-
-    .line 6
-    :goto_0
-    iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->m:Ljava/util/HashSet;
-
-    .line 7
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    if-eqz v1, :cond_2
-
-    .line 8
-    invoke-static {v0}, Ln56;->B(Ljava/util/Set;)[J
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    goto :goto_1
-
-    :cond_2
-    move-object v5, v2
+    const/4 v5, 0x0
 
     .line 9
-    :goto_1
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->o:Ljava/util/HashSet;
 
     .line 10
@@ -5830,7 +5853,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
     .line 11
     invoke-static {v0}, Ln56;->B(Ljava/util/Set;)[J
@@ -5839,24 +5862,24 @@
 
     move-object v6, v0
 
-    goto :goto_2
+    goto :goto_0
 
-    :cond_3
+    :cond_1
     move-object v6, v2
 
     .line 12
-    :goto_2
+    :goto_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
     .line 13
     invoke-static {v0}, Lon6;->i(Landroid/content/Context;)Lep6;
@@ -5870,29 +5893,29 @@
     invoke-virtual/range {v3 .. v8}, Lep6;->B([J[J[JZZ)V
 
     .line 14
-    :cond_4
+    :cond_2
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->h:Lap6$a;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_3
 
     .line 15
     invoke-virtual {v0}, Landroid/database/CursorWrapper;->isClosed()Z
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_3
 
     .line 16
     invoke-virtual {v0}, Landroid/database/CursorWrapper;->close()V
 
     .line 17
-    :cond_5
+    :cond_3
     iput-object v2, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->h:Lap6$a;
 
     .line 18
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->g:Lcom/noinnion/android/greader/ui/item/ItemFragment$b;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_7
 
     .line 19
     iget-object v1, v0, Lcom/noinnion/android/greader/ui/item/ItemFragment$b;->c:Landroid/util/SparseArray;
@@ -5905,8 +5928,8 @@
 
     const/4 v4, 0x0
 
-    :goto_3
-    if-ge v4, v1, :cond_8
+    :goto_1
+    if-ge v4, v1, :cond_6
 
     .line 20
     iget-object v5, v0, Lcom/noinnion/android/greader/ui/item/ItemFragment$b;->c:Landroid/util/SparseArray;
@@ -5917,14 +5940,14 @@
 
     instance-of v6, v5, Lcom/noinnion/android/reader/ui/widget/ItemWebView;
 
-    if-nez v6, :cond_6
+    if-nez v6, :cond_4
 
     move-object v5, v2
 
-    :cond_6
+    :cond_4
     check-cast v5, Lcom/noinnion/android/reader/ui/widget/ItemWebView;
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_5
 
     .line 21
     invoke-virtual {v5}, Landroid/webkit/WebView;->stopLoading()V
@@ -5932,13 +5955,13 @@
     .line 22
     invoke-virtual {v5}, Lcom/noinnion/android/reader/ui/widget/ItemWebView;->destroy()V
 
-    :cond_7
+    :cond_5
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_3
+    goto :goto_1
 
     .line 23
-    :cond_8
+    :cond_6
     iget-object v0, v0, Lcom/noinnion/android/greader/ui/item/ItemFragment$b;->c:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -5948,32 +5971,32 @@
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->removeAtRange(II)V
 
     .line 24
-    :cond_9
+    :cond_7
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->H:Lcom/google/android/gms/ads/AdView;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_8
 
     invoke-virtual {v0}, Lcom/google/android/gms/ads/AdView;->destroy()V
 
     .line 25
-    :cond_a
+    :cond_8
     iput-object v2, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->H:Lcom/google/android/gms/ads/AdView;
 
     .line 26
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->I:Lcom/google/android/gms/ads/nativead/NativeAd;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_9
 
     invoke-virtual {v0}, Lcom/google/android/gms/ads/nativead/NativeAd;->destroy()V
 
     .line 27
-    :cond_b
+    :cond_9
     iput-object v2, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->I:Lcom/google/android/gms/ads/nativead/NativeAd;
 
     .line 28
     iget-object v0, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->J:Lcom/google/android/gms/ads/rewardedinterstitial/RewardedInterstitialAd;
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_a
 
     const-string v1, "$this$destroy"
 
@@ -5984,7 +6007,7 @@
     invoke-virtual {v0, v2}, Lcom/google/android/gms/ads/rewardedinterstitial/RewardedInterstitialAd;->setFullScreenContentCallback(Lcom/google/android/gms/ads/FullScreenContentCallback;)V
 
     .line 31
-    :cond_c
+    :cond_a
     iput-object v2, p0, Lcom/noinnion/android/greader/ui/item/ItemFragment;->J:Lcom/google/android/gms/ads/rewardedinterstitial/RewardedInterstitialAd;
 
     .line 32
