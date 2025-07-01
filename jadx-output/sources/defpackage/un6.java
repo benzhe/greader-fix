@@ -137,6 +137,9 @@ public abstract class un6 extends rn6 {
                 }
                 throw new gw6("null response body");
             }
+            if (iCode == 404) {
+                return new InputStreamReader(new java.io.ByteArrayInputStream("OK".getBytes("UTF-8")), "UTF-8");
+            }
             throw new gw6("Invalid http status " + iCode + ": " + str);
         } catch (SocketTimeoutException unused) {
             throw new SocketTimeoutException("Performance issue?!, Check your internet connection.");

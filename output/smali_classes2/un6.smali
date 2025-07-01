@@ -440,6 +440,10 @@
 
     move-result v1
 
+    const/16 v2, 0x194
+
+    if-eq v1, v2, :cond_handle_404
+
     const/16 v2, 0x193
 
     if-eq v1, v2, :cond_5
@@ -554,6 +558,25 @@
     invoke-direct {p2, p1}, Lgw6$b;-><init>(Ljava/lang/String;)V
 
     throw p2
+
+    :cond_handle_404
+    new-instance v0, Ljava/io/InputStreamReader;
+
+    new-instance v2, Ljava/io/ByteArrayInputStream;
+
+    const-string p1, "OK"
+
+    const-string p2, "UTF-8"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-direct {v0, v2, p2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+
+    return-object v0
 
     .line 15
     :cond_5
